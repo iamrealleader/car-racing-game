@@ -1,0 +1,107 @@
+ *{
+    padding: 0;
+    margin: 0;
+ }
+ .sky{
+    background: url(./assets/sky.jpeg)  repeat-x;
+    object-fit:cover;
+    width: 600vw;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+    animation: allmove linear 100s infinite both;
+ }
+ .tree{
+    background: url(./assets/trees.png) repeat-x;
+    width: 600vw;
+    height: 300px;
+    position: absolute;
+    bottom: 70px;
+    animation: allmove linear 15s infinite both;
+ }
+ .road{
+    background: url(./assets/road.png) repeat-x;
+    width: 600vw;
+    height: 270px;
+    position: absolute;
+    bottom: -20px;
+    background-size:contain;
+    animation: allmove linear 8s infinite both;
+ }
+ .car{
+    background: url(./assets/car.png) no-repeat;
+    width: 500px;
+    height:500px;
+    position: absolute;
+    bottom: -110px;
+    left: 230px;
+    background-size:contain;
+ }
+.tyre{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 235px;
+    left:115px;
+    animation: tyres linear 0.3s infinite both;
+}
+.tyre2{
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 237px;
+    left:303px;
+    animation: tyres linear 0.3s infinite both;
+}
+
+
+@keyframes tyres {
+   100%{
+      transform:rotate(360deg);
+   }
+}
+
+@keyframes allmove {
+   100%{
+      transform:translatex(-500vw);
+   }
+}
+
+@media screen and (max-width : 400px) {
+   .road{
+      height: 250px;  
+      position: absolute;
+      bottom: -10px;
+      animation: allmove linear 4s infinite both;
+   }
+   .tree{
+      height: 290px;
+      position: absolute;
+      bottom: 130px;
+      animation: allmove linear 7s infinite both;
+   }
+   .car{
+      width: 250px;
+      height:250px;
+      position: absolute;
+      bottom: -15px;
+      left: -10px;
+      background-size:contain;
+   }
+   .tyre{
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 120px;
+      left:151px;
+      animation: tyres linear 0.3s infinite both;
+  }
+  .tyre2{
+   width: 35px;
+   height: 35px;
+   position: absolute;
+   top: 118px;
+   left:58px;
+   animation: tyres linear 0.3s infinite both;
+  }
+}
